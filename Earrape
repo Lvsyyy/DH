@@ -1,16 +1,12 @@
 local player = game.Players.LocalPlayer
 local backpack = player.Backpack
 
-_G.w = true
-while _G.w == true do
-    wait()
-  for i, item in pairs(backpack:GetChildren()) do
-    if item:IsA("Tool") then
+for i, item in pairs(backpack:GetChildren()) do
+   if item:IsA("Tool") then
       player.Character.Humanoid:EquipTool(item)
       item.Remote:FireServer("PlaySong", 6555905311)
       task.wait(0.1)
       player.Character.Humanoid:UnequipTools()
       break
-    end
-  end
+   end
 end
