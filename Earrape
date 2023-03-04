@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 local backpack = player.Backpack
 
-_G.w = false
+_G.w = true
 while _G.w == true do
     wait()
   for i, item in pairs(backpack:GetChildren()) do
